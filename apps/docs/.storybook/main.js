@@ -1,15 +1,20 @@
 const path = require("path");
 
-const scssVariablesFilePath = path.resolve(
-  __dirname,
-  "../../../packages/acme-core/src/styles/_variables.scss"
-)
-const scssUtilsFilePath = path.resolve(
-  __dirname,
-  "../../../packages/acme-core/src/styles/_utilities.scss"
-)
+const getAdditionalScssData = () => {
+  const scssFilePaths = [
+    path.resolve(
+      __dirname,
+      "../../../packages/acme-core/src/styles/_variables.scss"
+    ),
+    path.resolve(
+      __dirname,
+      "../../../packages/acme-core/src/styles/_utilities.scss"
+    )
+  ]
 
-console.log(scssVariablesFilePath);
+  return scssFilePaths.map(scssFile => `@import "${scssFile}";`).join(`\n`)
+}
+
 
 module.exports = {
   stories: ["../stories/**/*.stories.mdx", "../stories/**/*.stories.tsx"],
@@ -36,10 +41,7 @@ module.exports = {
       css: {
         preprocessorOptions: {
           scss: {
-            additionalData: `
-              @import "${scssVariablesFilePath}";
-              @import "${scssUtilsFilePath}";
-            `
+            additionalData: getAdditionalScssData()
           },
         }
       }

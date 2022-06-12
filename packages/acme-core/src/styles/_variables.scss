@@ -52,12 +52,12 @@ $dark: $gray-900 !default;
 $default-theme-colors: (
   "btn-bg-color": $primary,
   "btn-border-color": rgba($primary, 0.3),
-);
+) !default;
 
 $theme-colors: (
   "default": $default-theme-colors,
 ) !default;
 
-$default-theme: "default";
+$default-theme: "default" !default;
 
-$theme: map-get($theme-colors, "default");
+$theme: map-get($theme-colors, "default") !default;

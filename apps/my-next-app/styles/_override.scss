@@ -1,0 +1,27 @@
+/* Using only css - need import this file */
+// @import "@acme/core/dist/styles/css/index.css";
+
+/* Using scss & custom variables */
+// @import "@acme/core/dist/styles/css/index.css";
+
+@import "@acme/core/dist/styles/scss/_variables.scss";
+
+$game-colors: (
+  "btn-bg-color": $red,
+  "btn-border-color": rgba($red, 0.3),
+) !default;
+
+$theme-colors: (
+  "default": $default-theme-colors,
+  "game": $game-colors,
+);
+
+$theme: map-get($theme-colors, "game");
+
+@import "@acme/core/dist/styles/scss/_utilities.scss";
+@import "@acme/core/dist/styles/scss/_root.scss";
+
+body {
+  --ds-prefix: #{$prefix};
+}
+

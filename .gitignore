@@ -1,5 +1,10 @@
 node_modules
 .idea
+.vscode
 
-dist/
-storybook-static/
+dist
+
+.turbo
+
+dist
+storybook-static

@@ -1,0 +1,9 @@
+/** @type {import('next').NextConfig} */
+const withTM = require("next-transpile-modules")(["@acme/core"])
+
+
+const nextConfig = withTM({
+  reactStrictMode: true,
+})
+
+module.exports = nextConfig

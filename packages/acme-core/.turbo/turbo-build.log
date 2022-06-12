@@ -1,5 +1,9 @@
-@acme/core:build: cache hit, replaying output [2m07e82ec777185b90[0m
-[33m@acme/core:build: [0m$ rollup -c
-[33m@acme/core:build: [0m[36m
-[33m@acme/core:build: [0m[1msrc/index.tsx[22m → [1mdist/cjs/index.js, dist/esm/index.js[22m...[39m
-[33m@acme/core:build: [0m[32mcreated [1mdist/cjs/index.js, dist/esm/index.js[22m in [1m984ms[22m[39m
+@acme/core:build: cache hit, replaying output [2mbb63f1c162c0f63e[0m
+[34m@acme/core:build: [0m$ rm -rf dist && rollup -c
+[34m@acme/core:build: [0m[36m
+[34m@acme/core:build: [0m[1msrc/index.tsx[22m → [1mdist/cjs/index.js, dist/esm/index.js[22m...[39m
+[34m@acme/core:build: [0m[32mcreated [1mdist/cjs/index.js, dist/esm/index.js[22m in [1m999ms[22m[39m
+[34m@acme/core:build: [0m[36m
+[34m@acme/core:build: [0m[1msrc/styles/_index.scss[22m → [1mdist/styles/css/index.css[22m...[39m
+[34m@acme/core:build: [0m[1m[33m(!) The emitted file "index.css" overwrites a previously emitted file of the same name.[39m[22m
+[34m@acme/core:build: [0m[32mcreated [1mdist/styles/css/index.css[22m in [1m14ms[22m[39m

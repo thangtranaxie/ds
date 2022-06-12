@@ -1,45 +1,44 @@
-@acme/docs:build: cache hit, replaying output [2m3e509ef57a579880[0m
-[36m@acme/docs:build: [0m$ build-storybook --docs
-[36m@acme/docs:build: [0minfo @storybook/react v6.5.8
-[36m@acme/docs:build: [0minfo 
-[36m@acme/docs:build: [0minfo => Cleaning outputDir: /Users/thangtran/Documents/skymavis/ds/apps/docs/storybook-static
-[36m@acme/docs:build: [0m/Users/thangtran/Documents/skymavis/ds/packages/acme-core/src/styles/_variables.scss
-[36m@acme/docs:build: [0minfo => Loading presets
-[36m@acme/docs:build: [0minfo => Compiling manager..
-[36m@acme/docs:build: [0mvite v2.9.10 building for production...
-[36m@acme/docs:build: [0mtransforming...
-[36m@acme/docs:build: [0mUse of eval is strongly discouraged, as it poses security risks and may cause issues with minification
-[36m@acme/docs:build: [0mUse of eval is strongly discouraged, as it poses security risks and may cause issues with minification
-[36m@acme/docs:build: [0mUse of eval is strongly discouraged, as it poses security risks and may cause issues with minification
-[36m@acme/docs:build: [0m'default' is not exported by '../../../../../../../virtual:/@storybook/builder-vite/preview-entry.js'
-[36m@acme/docs:build: [0m✓ 975 modules transformed.
-[36m@acme/docs:build: [0mrendering chunks...
-[36m@acme/docs:build: [0minfo => Manager built (7.8 s)
-[36m@acme/docs:build: [0mstorybook-static/iframe.html                                          13.24 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/client.3475bee2.js                            0.58 KiB / gzip: 0.36 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/client.3475bee2.js.map                        0.86 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/index.71d44e93.js                             2.61 KiB / gzip: 1.22 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/index.71d44e93.js.map                         5.77 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/GlobalScrollAreaStyles-8793ce4a.78b556cb.js   10.01 KiB / gzip: 2.22 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/GlobalScrollAreaStyles-8793ce4a.78b556cb.js.map 18.81 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/renderDocs.d5d5b8a0.js                        2.38 KiB / gzip: 1.13 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/renderDocs.d5d5b8a0.js.map                    8.11 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/Color-e9687cd5.7e3b77be.js                    32.79 KiB / gzip: 12.25 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/Color-e9687cd5.7e3b77be.js.map                128.12 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/WithTooltip-5d9955be.6fd3e62b.js              37.92 KiB / gzip: 12.51 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/WithTooltip-5d9955be.6fd3e62b.js.map          173.79 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/iframe.3aabc7ed.css                           0.88 KiB / gzip: 0.48 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/OverlayScrollbars-d54f9566.0f8d37ae.js        58.01 KiB / gzip: 24.87 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/OverlayScrollbars-d54f9566.0f8d37ae.js.map    426.30 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/syntaxhighlighter-75381027.6c389995.js        75.09 KiB / gzip: 27.15 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/syntaxhighlighter-75381027.6c389995.js.map    266.55 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/formatter-c2d2643c.224f0472.js                700.91 KiB / gzip: 219.18 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/formatter-c2d2643c.224f0472.js.map            1529.69 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/iframe.17dfea47.js                            1432.82 KiB / gzip: 404.83 KiB
-[36m@acme/docs:build: [0mstorybook-static/assets/iframe.17dfea47.js.map                        3721.62 KiB
-[36m@acme/docs:build: [0m
-[36m@acme/docs:build: [0m(!) Some chunks are larger than 500 KiB after minification. Consider:
-[36m@acme/docs:build: [0m- Using dynamic import() to code-split the application
-[36m@acme/docs:build: [0m- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/guide/en/#outputmanualchunks
-[36m@acme/docs:build: [0m- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-[36m@acme/docs:build: [0minfo => Output directory: /Users/thangtran/Documents/skymavis/ds/apps/docs/storybook-static
+@acme/docs:build: cache hit, replaying output [2mb33083a32a92f72b[0m
+[35m@acme/docs:build: [0m$ build-storybook --docs
+[35m@acme/docs:build: [0minfo @storybook/react v6.5.8
+[35m@acme/docs:build: [0minfo 
+[35m@acme/docs:build: [0minfo => Cleaning outputDir: /Users/thangtran/Documents/skymavis/ds/apps/docs/storybook-static
+[35m@acme/docs:build: [0minfo => Loading presets
+[35m@acme/docs:build: [0minfo => Compiling manager..
+[35m@acme/docs:build: [0mvite v2.9.10 building for production...
+[35m@acme/docs:build: [0mtransforming...
+[35m@acme/docs:build: [0mUse of eval is strongly discouraged, as it poses security risks and may cause issues with minification
+[35m@acme/docs:build: [0mUse of eval is strongly discouraged, as it poses security risks and may cause issues with minification
+[35m@acme/docs:build: [0mUse of eval is strongly discouraged, as it poses security risks and may cause issues with minification
+[35m@acme/docs:build: [0m'default' is not exported by '../../../../../../../virtual:/@storybook/builder-vite/preview-entry.js'
+[35m@acme/docs:build: [0m✓ 975 modules transformed.
+[35m@acme/docs:build: [0mrendering chunks...
+[35m@acme/docs:build: [0minfo => Manager built (7.99 s)
+[35m@acme/docs:build: [0mstorybook-static/iframe.html                                          13.24 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/client.3475bee2.js                            0.58 KiB / gzip: 0.36 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/client.3475bee2.js.map                        0.86 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/index.71d44e93.js                             2.61 KiB / gzip: 1.22 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/index.71d44e93.js.map                         5.77 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/GlobalScrollAreaStyles-8793ce4a.78b556cb.js   10.01 KiB / gzip: 2.22 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/GlobalScrollAreaStyles-8793ce4a.78b556cb.js.map 18.81 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/renderDocs.d5d5b8a0.js                        2.38 KiB / gzip: 1.13 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/renderDocs.d5d5b8a0.js.map                    8.11 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/Color-e9687cd5.7e3b77be.js                    32.79 KiB / gzip: 12.25 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/Color-e9687cd5.7e3b77be.js.map                128.12 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/iframe.3aabc7ed.css                           0.88 KiB / gzip: 0.48 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/WithTooltip-5d9955be.6fd3e62b.js              37.92 KiB / gzip: 12.51 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/WithTooltip-5d9955be.6fd3e62b.js.map          173.79 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/OverlayScrollbars-d54f9566.0f8d37ae.js        58.01 KiB / gzip: 24.87 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/OverlayScrollbars-d54f9566.0f8d37ae.js.map    426.30 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/syntaxhighlighter-75381027.6c389995.js        75.09 KiB / gzip: 27.15 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/syntaxhighlighter-75381027.6c389995.js.map    266.55 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/formatter-c2d2643c.224f0472.js                700.91 KiB / gzip: 219.18 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/formatter-c2d2643c.224f0472.js.map            1529.69 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/iframe.17dfea47.js                            1432.82 KiB / gzip: 404.83 KiB
+[35m@acme/docs:build: [0mstorybook-static/assets/iframe.17dfea47.js.map                        3721.63 KiB
+[35m@acme/docs:build: [0m
+[35m@acme/docs:build: [0m(!) Some chunks are larger than 500 KiB after minification. Consider:
+[35m@acme/docs:build: [0m- Using dynamic import() to code-split the application
+[35m@acme/docs:build: [0m- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/guide/en/#outputmanualchunks
+[35m@acme/docs:build: [0m- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[35m@acme/docs:build: [0minfo => Output directory: /Users/thangtran/Documents/skymavis/ds/apps/docs/storybook-static
