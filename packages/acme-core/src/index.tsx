@@ -1,2 +1,5 @@
 import * as React from "react";
-export { Button, type ButtonProps } from "./Button";
+
+import './styles/_root.scss';
+
+export { Button, type ButtonProps } from "./button";
