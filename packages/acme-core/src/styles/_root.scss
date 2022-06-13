@@ -3,7 +3,9 @@
     --#{$prefix}#{$color}: #{$value};
   }
 
-  @each $key, $value in $theme {
+  @each $key, $value in $theme-colors {
     --#{$prefix}#{$key}: #{$value};
   }
+
+  --#{$prefix}font-family-base: #{$font-family-base};
 }

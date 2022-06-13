@@ -1,0 +1,43 @@
+$btn-padding-y: 10px !default;
+$btn-padding-x: 16px !default;
+
+$btn-font-weight: 600 !default;
+$btn-font-size: 16px !default;
+$btn-line-height: 20px !default;
+
+$btn-padding-y-sm: 8px !default;
+$btn-padding-x-sm: 12px !default;
+$btn-font-size-sm: 12px !default;
+$btn-line-height-sm: 16px !default;
+
+$btn-padding-y-lg: 12px !default;
+$btn-padding-x-lg: 20px !default;
+$btn-font-size-lg: 20px !default;
+$btn-line-height-lg: 24px !default;
+
+$btn-border-width: 8px !default;
+
+$btn-bg-color: $primary !default;
+$btn-border-color: rgba($primary, 0.3) !default;
+
+$btn-vars: (
+  "btn-padding-y": $btn-padding-y,
+  "btn-padding-x": $btn-padding-x,
+
+  "btn-font-weight": $btn-font-weight,
+  "btn-font-size": $btn-font-size,
+  "btn-line-height": $btn-line-height,
+
+  "btn-padding-y-sm": $btn-padding-y-sm,
+  "btn-padding-x-sm": $btn-padding-x-sm,
+  "btn-font-size-sm": $btn-font-size-sm,
+  "btn-line-height-sm": $btn-line-height-sm,
+
+  "btn-padding-y-lg": $btn-padding-y-lg,
+  "btn-padding-x-lg": $btn-padding-x-lg,
+  "btn-font-size-lg": $btn-font-size-lg,
+  "btn-line-height-lg": $btn-line-height-lg,
+
+  "btn-bg-color": $btn-bg-color,
+  "btn-border-color": $btn-border-color,
+);

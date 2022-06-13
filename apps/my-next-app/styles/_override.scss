@@ -2,26 +2,16 @@
 // @import "@acme/core/dist/styles/css/index.css";
 
 /* Using scss & custom variables */
-// @import "@acme/core/dist/styles/css/index.css";
 
 @import "@acme/core/dist/styles/scss/_variables.scss";
 
-$game-colors: (
+$game-theme-colors: (
   "btn-bg-color": $red,
   "btn-border-color": rgba($red, 0.3),
-) !default;
-
-$theme-colors: (
-  "default": $default-theme-colors,
-  "game": $game-colors,
 );
 
-$theme: map-get($theme-colors, "game");
+$theme-colors: map-merge($default-theme-colors, $game-theme-colors);
 
 @import "@acme/core/dist/styles/scss/_utilities.scss";
 @import "@acme/core/dist/styles/scss/_root.scss";
-
-body {
-  --ds-prefix: #{$prefix};
-}
-
+@import "@acme/core/dist/styles/scss/_reboot.scss";

@@ -1,3 +1,9 @@
+$prefix: dg- !default; // shorthand for dango design system
+
+// font-variables
+$font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+// theme-colors-variables
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -38,8 +44,6 @@ $colors: (
   "gray-dark": $gray-800,
 );
 
-$prefix: dg- !default; // shorthand for dango design system
-
 $primary: $blue !default;
 $secondary: $gray-600 !default;
 $success: $green !default;
@@ -49,15 +53,8 @@ $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-900 !default;
 
-$default-theme-colors: (
-  "btn-bg-color": $primary,
-  "btn-border-color": rgba($primary, 0.3),
-) !default;
+@import './components/index';
 
-$theme-colors: (
-  "default": $default-theme-colors,
-) !default;
+$default-theme-colors: map-merge($btn-vars, $tab-vars) !default;
 
-$default-theme: "default" !default;
-
-$theme: map-get($theme-colors, "default") !default;
+$theme-colors: $default-theme-colors !default;

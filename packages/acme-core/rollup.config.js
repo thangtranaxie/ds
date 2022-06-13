@@ -52,17 +52,24 @@ const mainConfig = defineConfig({
         ],
       ],
       inject: (cssVariableName, fileId) => {
-        if (fileId.includes('_root.scss')) {
+        const ignoreScssFiles = [
+          '_root.scss',
+          '_reboot.scss'
+        ]
+        // if (fileId.includes('_root.scss')) {
+        const isIgnoreFile = Boolean(ignoreScssFiles.find(file => fileId.includes(file)))
+        if (isIgnoreFile) {
           return ''
         }
         return `import styleInject from 'style-inject';\nstyleInject(${cssVariableName});`;
       },
+      extensions: ['.css', '.sss'],
       modules: true,
       minimize: true,
     }),
     copy({
       targets: [
-        { src: 'src/styles/**', dest: 'dist/styles/scss' }
+        { src: 'src/styles/*', dest: 'dist/styles/scss' }
       ]
     })
   ],
@@ -79,6 +86,7 @@ const cssConfig = defineConfig({
       plugins: [autoprefixer()],
       modules: true,
       extract: true,
+      minimize: true,
     }),
   ],
 });
