@@ -1,0 +1,9 @@
+@function get-theme-value($name, $theme-colors: $theme-colors) {
+  $value: map-get($theme-colors, $name);
+
+  @if not $value {
+    @error "theme value `#{$name}` not found in `#{$theme-colors}`";
+  }
+
+  @return var(--#{$prefix}#{$name});
+}

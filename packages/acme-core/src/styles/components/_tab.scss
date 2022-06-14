@@ -1,0 +1,13 @@
+$tab-padding-y: 4px !default;
+$tab-padding-x: 8px !default;
+
+$tab-border-bottom-width: 1px !default;
+$tab-border-color: $primary !default;
+
+$tab-vars: (
+  "tab-padding-y": $tab-padding-y,
+  "tab-padding-x": $tab-padding-x,
+
+  "tab-border-bottom-width": $tab-border-bottom-width,
+  "tab-border-color": $tab-border-color,
+);
