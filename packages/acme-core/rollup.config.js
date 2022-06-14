@@ -1,5 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { defineConfig } from "rollup";
+import {
+  defineConfig
+} from "rollup";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
@@ -8,6 +10,42 @@ import postcss from "rollup-plugin-postcss";
 import autoprefixer from "autoprefixer";
 import path from "path";
 import copy from 'rollup-plugin-copy'
+import sass from 'node-sass'
+import fsExtra from 'fs-extra'
+
+
+function bundleCSS() {
+  return {
+    name: 'bundle-css',
+    writeBundle() {
+      try {
+        const globalSCSS = fsExtra.readFileSync(path.resolve(__dirname, 'src/styles/_index.scss'))
+        const dangoComponentsCSS = fsExtra.readFileSync(path.resolve(__dirname, 'dist/esm/dango.css'))
+  
+        const allCSSResult = sass.renderSync({
+          file: path.resolve(__dirname, './src/styles/_index.scss'),
+          outputStyle: 'compressed',
+          data: globalSCSS.toString() + dangoComponentsCSS.toString(),
+        });
+  
+        fsExtra.outputFileSync(
+          path.resolve(__dirname, 'dist/bundle.css'),
+          allCSSResult.css
+        )
+      
+        fsExtra.outputFileSync(
+          path.resolve(__dirname, 'dist/styles/css/dango.css'),
+          dangoComponentsCSS,
+        )
+
+        fsExtra.rmSync(path.resolve(__dirname, 'dist/esm/dango.css'))
+        fsExtra.rmSync(path.resolve(__dirname, 'dist/cjs/dango.css'))
+      } catch (error) {
+        console.error('[bundleCSS]Error_Bundle_CSS', error);
+      }
+    },
+  };
+}
 
 const getAdditionalScssData = () => {
   const scssFilePaths = [
@@ -40,7 +78,9 @@ const mainConfig = defineConfig({
     resolve(),
     commonjs(),
 
-    typescript({ useTsconfigDeclarationDir: true }),
+    typescript({
+      useTsconfigDeclarationDir: true
+    }),
     postcss({
       plugins: [
         autoprefixer(),
@@ -53,27 +93,16 @@ const mainConfig = defineConfig({
           },
         ],
       ],
-      // inject: (cssVariableName, fileId) => {
-      //   const ignoreScssFiles = [
-      //     '_root.scss',
-      //     '_reboot.scss'
-      //   ]
-      //   const isIgnoreFile = Boolean(ignoreScssFiles.find(file => fileId.includes(file)))
-      //   if (isIgnoreFile) {
-      //     return ''
-      //   }
-
-      //   return `import styleInject from 'style-inject';\nstyleInject(${cssVariableName});`;
-      // },
       modules: true,
       minimize: true,
-      extract: true,
+      extract: 'dango.css'
     }),
     copy({
-      targets: [
-        { src: 'src/styles/*', dest: 'dist/styles/scss' }
-      ]
-    })
+      targets: [{
+        src: 'src/styles/*',
+        dest: 'dist/styles/scss'
+      }]
+    }),
   ],
 })
 
@@ -82,7 +111,7 @@ const cssConfig = defineConfig({
     "src/styles/_index.scss",
   ],
   output: {
-    file: "dist/styles/css/index.css",
+    file: "dist/bundle.css",
     format: "es",
   },
   plugins: [
@@ -90,8 +119,9 @@ const cssConfig = defineConfig({
       plugins: [autoprefixer()],
       modules: false,
       minimize: true,
-      extract: path.resolve(__dirname, "dist/styles/css/index.css"),
+      extract: path.resolve(__dirname, "dist/bundle.css"),
     }),
+    bundleCSS()
   ],
 });
 

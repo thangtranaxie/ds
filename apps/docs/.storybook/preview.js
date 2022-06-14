@@ -1,1 +1,1 @@
-import '@acme/core/dist/styles/css/index.css'
+import '@acme/core/src/styles/_index.scss'

@@ -1,9 +1,8 @@
 /* Using only css - need import this file */
 // @import "@acme/core/dist/styles/css/index.css";
-@import "@acme/core/dist/esm/index.css";
 
-/* Using scss & custom variables */
 
+// /* Using scss & custom variables */
 @import "@acme/core/dist/styles/scss/_variables.scss";
 
 $game-theme-colors: (
@@ -16,3 +15,4 @@ $theme-colors: map-merge($default-theme-colors, $game-theme-colors);
 @import "@acme/core/dist/styles/scss/_utilities.scss";
 @import "@acme/core/dist/styles/scss/_root.scss";
 @import "@acme/core/dist/styles/scss/_reboot.scss";
+@import "@acme/core/dist/styles/css/dango.css";
