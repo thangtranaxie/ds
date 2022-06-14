@@ -19,7 +19,9 @@ const getAdditionalScssData = () => {
 };
 
 const mainConfig = defineConfig({
-  input: "src/index.tsx",
+  input: [
+    "src/index.tsx",
+  ],
   output: [
     {
       file: "dist/cjs/index.js",
@@ -51,21 +53,21 @@ const mainConfig = defineConfig({
           },
         ],
       ],
-      inject: (cssVariableName, fileId) => {
-        const ignoreScssFiles = [
-          '_root.scss',
-          '_reboot.scss'
-        ]
-        // if (fileId.includes('_root.scss')) {
-        const isIgnoreFile = Boolean(ignoreScssFiles.find(file => fileId.includes(file)))
-        if (isIgnoreFile) {
-          return ''
-        }
-        return `import styleInject from 'style-inject';\nstyleInject(${cssVariableName});`;
-      },
-      extensions: ['.css', '.sss'],
+      // inject: (cssVariableName, fileId) => {
+      //   const ignoreScssFiles = [
+      //     '_root.scss',
+      //     '_reboot.scss'
+      //   ]
+      //   const isIgnoreFile = Boolean(ignoreScssFiles.find(file => fileId.includes(file)))
+      //   if (isIgnoreFile) {
+      //     return ''
+      //   }
+
+      //   return `import styleInject from 'style-inject';\nstyleInject(${cssVariableName});`;
+      // },
       modules: true,
       minimize: true,
+      extract: true,
     }),
     copy({
       targets: [
@@ -76,7 +78,9 @@ const mainConfig = defineConfig({
 })
 
 const cssConfig = defineConfig({
-  input: "src/styles/_index.scss",
+  input: [
+    "src/styles/_index.scss",
+  ],
   output: {
     file: "dist/styles/css/index.css",
     format: "es",
@@ -84,9 +88,9 @@ const cssConfig = defineConfig({
   plugins: [
     postcss({
       plugins: [autoprefixer()],
-      modules: true,
-      extract: true,
+      modules: false,
       minimize: true,
+      extract: path.resolve(__dirname, "dist/styles/css/index.css"),
     }),
   ],
 });
